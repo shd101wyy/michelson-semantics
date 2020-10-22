@@ -1615,6 +1615,7 @@ since it does not need to track the new map while keeping it off the stack.
            ...
        </k>
        <stack> [list T [ E ] ;; L] ; SS => [T E] ; SS </stack>
+    requires isValue(T,E)
 ```
 
 The `MAP` operation over `list`s is defined in terms of a helper function.
