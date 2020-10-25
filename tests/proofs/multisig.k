@@ -1,4 +1,4 @@
-requires "lemmas.k"
+requires "lemmas.md"
 
 module MULTISIG
   imports LEMMAS
@@ -107,8 +107,8 @@ module MULTISIG
                      (Pair
                        (Pair Count:Int
                              (Left #Lambda(unit, list operation, _:Block)))
-                       SigList:List))
-                   (Pair Count:Int (Pair Threshold:Int KeyList:List)) ] ; .Stack
+                       SigList:InternalList))
+                   (Pair Count:Int (Pair Threshold:Int KeyList:InternalList)) ] ; .Stack
             // -----------------------------------------------------------------
             => [ pair (list operation) (pair nat (pair nat (list key))) ?_:Pair ] ; .Stack
        </stack>
